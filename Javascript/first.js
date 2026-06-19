@@ -59,7 +59,7 @@
 //     color = "blue"
 // }
 
-// console.log(color)   that's how if-elseif -else statements are used...
+// console.log(color)   that's how if-elseif             -else statements are used...
 
 
 // let age = 25
@@ -149,7 +149,6 @@
 // }
 
 
-
 // practise Q's-1
 // let marks =[86, 64, 45, 78, 23];
 // let sum= 0;
@@ -167,6 +166,7 @@
 //shift and unshift deleted from start and adds to start respectively
 //slice returns a piece of arr
 //splice() returns original array (add, remove, replace)
+
 
 
 

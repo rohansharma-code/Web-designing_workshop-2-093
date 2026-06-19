@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Calculator</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: beige;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Factorial Calculator</h1>
+
+        <input
+            type="number"
+            id="number"
+            placeholder="Enter a number"
+            min="0">
+
+        <button onclick="calculateFactorial()">
+            Calculate
+        </button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateFactorial() {
+            const num = Number(document.getElementById("number").value);
+            const result = document.getElementById("result");
+
+            if (isNaN(num) || num < 0) {
+                result.innerHTML = "Please enter a number.";
+                return;
+            }
+
+            let factorial = 1;
+
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+
+            result.innerHTML = `Factorial of ${num} = ${factorial}`;
+        }
+    </script>
+
+</body>
+</html>
